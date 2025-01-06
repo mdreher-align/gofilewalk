@@ -1,33 +1,13 @@
 #!/usr/bin/env bash
 
-echo 'filepathwalk'
-cd filepathwalk
-go install
-cd ..
+set -ex
 
-echo 'filepathwalkdir'
-cd filepathwalkdir
-go install
-cd ..
+GOBIN=${GOBIN:-$(pwd)/bin}
+export GOBIN
+mkdir -p "$GOBIN"
 
-echo 'iafan'
-cd iafan
-go install
-cd ..
-
-echo 'karrick'
-cd karrick
-go install
-cd ..
-
-echo 'michealtjones'
-cd michealtjones
-go install
-cd ..
-
-echo 'readdir'
-cd readdir
-go install
-cd ..
+for d in filepathwalk filepathwalkdir karrick readdir; do
+    go install -C $d
+done
 
 echo 'All Done'

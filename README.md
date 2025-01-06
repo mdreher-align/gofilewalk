@@ -7,11 +7,11 @@ https://engineering.kablamo.com.au/posts/2021/quick-comparison-between-go-file-w
 Install them and use hyperfine to test.
 
 ```
-hyperfine 'filepathwalk' 'filepathwalkdir' 'iafan' 'karrick' 'michealtjones' 'readdir'
+hyperfine 'filepathwalk' 'filepathwalkdir' 'karrick' 'readdir'
 ```
 
 Or run like so to confirm the output is the same for all.
 
 ```
-filepathwalk && filepathwalkdir && iafan && karrick && michealtjones && readdir
+filepathwalk && filepathwalkdir && karrick && readdir
 ```
